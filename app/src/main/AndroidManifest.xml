@@ -3,6 +3,7 @@
     package="com.example.receivedmessage">
 
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,7 @@
         android:theme="@style/Theme.ReceivedMessage">
         <activity
             android:name=".SendSms"
-            android:exported="false" />
+            android:exported="true" />
         <!-- Registering the receiver action -->
         <receiver
             android:name=".MyReceiver"
@@ -25,7 +26,7 @@
         </receiver>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".ReceivedSms"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

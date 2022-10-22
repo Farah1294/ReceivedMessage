@@ -13,7 +13,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
- public class MainActivity extends AppCompatActivity {
+ public class ReceivedSms extends AppCompatActivity {
      //Here in MainActivity asking permission
      private static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 0;
      private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
