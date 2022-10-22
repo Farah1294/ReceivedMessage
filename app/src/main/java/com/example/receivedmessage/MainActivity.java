@@ -42,7 +42,7 @@ import android.widget.Toast;
      @Override
      protected void onCreate(Bundle savedInstanceState) {
          super.onCreate(savedInstanceState);
-         setContentView(R.layout.activity_ReceivedSms);
+         setContentView(R.layout.activity_receive_sms);
 
          tvMsg = findViewById(R.id.tvMsg);
          tvPhoneNum = findViewById(R.id.tvPhoneNum);
