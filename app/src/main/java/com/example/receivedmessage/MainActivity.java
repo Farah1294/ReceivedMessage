@@ -16,6 +16,7 @@ import android.widget.Toast;
  public class MainActivity extends AppCompatActivity {
      //Here in MainActivity asking permission
      private static final int MY_PERMISSIONS_REQUEST_RECEIVE_SMS = 0;
+     private static final String SMS_RECEIVED = "android.provider.Telephony.SMS_RECEIVED";
      TextView tvPhoneNum, tvMsg;
      MyReceiver receiver = new MyReceiver() {
          @Override
