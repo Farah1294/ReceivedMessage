@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.receivedmessage">
 
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,14 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReceivedMessage">
-        <!--Registering the receiver action-->
-        <receiver android:name=".MyReceiver" android:enabled="true" android:exported="true">
+        <activity
+            android:name=".SendSms"
+            android:exported="false" />
+        <!-- Registering the receiver action -->
+        <receiver
+            android:name=".MyReceiver"
+            android:enabled="true"
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.provider.Telephony.SMS_RECEIVED"></action>
-        </intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
         </receiver>
-
-
 
         <activity
             android:name=".MainActivity"
@@ -28,6 +34,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
 
 </manifest>
